@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification
+	xmlns="https://github.com/vqmod/vqmod"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
+	>
+	<id><![CDATA[[VQMOD] Product: Add "Phone Orders" text]]></id>
+	<version>0.1.0</version>
+	<vqmver>2.6.3</vqmver>
+	<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
+	<file path="catalog/controller/product/" name="product.php" error="log">
+		<operation error="skip">
+			<search position="before"><![CDATA[$data['entry_qty'] = $this->language->get('entry_qty');]]></search>
+			<add><![CDATA[
+			// kanenas: knns_catalog_product_phone_orders_text.xml (start) <<
+			$data['entry_phone_orders'] = $this->language->get('entry_phone_orders');
+			// kanenas: knns_catalog_product_phone_orders_text.xml (end) <<
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/language/english/product/" name="product.php" error="log">
+		<operation error="skip">
+			<search position="before"><![CDATA[$_['entry_qty']                = 'Qty';]]></search>
+			<add><![CDATA[
+// kanenas: knns_catalog_product_phone_orders_text.xml (start) <<
+$_['entry_phone_orders']       = 'For phone orders, call: +30 210 24 44 275';
+// kanenas: knns_catalog_product_phone_orders_text.xml (end) <<
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/language/greek/product/" name="product.php" error="log">
+		<operation error="skip">
+			<search position="before"><![CDATA[$_['entry_qty']                = 'Ποσότητα';]]></search>
+			<add><![CDATA[
+// kanenas: knns_catalog_product_phone_orders_text.xml (start) <<
+$_['entry_phone_orders']       = 'Για τηλεφωνικές παραγγελίες καλέσετε στο: 210 24 44 275';
+// kanenas: knns_catalog_product_phone_orders_text.xml (end) <<
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/view/theme/*/template/product/" name="product.tpl" error="log">
+		<operation error="skip">
+			<search position="before" index="3"><![CDATA[<?php if ($review_status) { ?>]]></search>
+			<add><![CDATA[
+          <?php // kanenas: knns_catalog_product_phone_orders_text.xml (start) << ?>
+          <div class="knns-phone-orders"><i class="fa fa-phone-square" aria-hidden="true"></i><span><?php echo $entry_phone_orders; ?></span></div>
+          <?php // kanenas: knns_catalog_product_phone_orders_text.xml (end) << ?>
+			]]></add>
+		</operation>
+	</file>
+</modification>
