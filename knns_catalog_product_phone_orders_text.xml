@@ -5,7 +5,7 @@
 	xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
 	>
 	<id><![CDATA[[VQMOD] Product: Add "Phone Orders" text]]></id>
-	<version>0.1.0</version>
+	<version>1.0.0</version>
 	<vqmver>2.6.3</vqmver>
 	<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
 	<file path="catalog/controller/product/" name="product.php" error="log">
@@ -23,7 +23,7 @@
 			<search position="before"><![CDATA[$_['entry_qty']                = 'Qty';]]></search>
 			<add><![CDATA[
 // kanenas: knns_catalog_product_phone_orders_text.xml (start) <<
-$_['entry_phone_orders']       = 'For phone orders, call: +30 210 24 44 275';
+$_['entry_phone_orders']       = 'For phone orders, call: +30 210 ΧΧ ΧΧ ΧΧΧ';
 // kanenas: knns_catalog_product_phone_orders_text.xml (end) <<
 			]]></add>
 		</operation>
@@ -33,7 +33,7 @@ $_['entry_phone_orders']       = 'For phone orders, call: +30 210 24 44 275';
 			<search position="before"><![CDATA[$_['entry_qty']                = 'Ποσότητα';]]></search>
 			<add><![CDATA[
 // kanenas: knns_catalog_product_phone_orders_text.xml (start) <<
-$_['entry_phone_orders']       = 'Για τηλεφωνικές παραγγελίες καλέσετε στο: 210 24 44 275';
+$_['entry_phone_orders']       = 'Για τηλεφωνικές παραγγελίες καλέστε στο: 210 ΧΧ ΧΧ ΧΧΧ';
 // kanenas: knns_catalog_product_phone_orders_text.xml (end) <<
 			]]></add>
 		</operation>
